@@ -23,4 +23,7 @@ Note that there is a nearly identical mod in the workshop with many subscribers 
       <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     </li>
   </modDependencies>
+  <incompatibleWith>
+    <li>mlie.foodpoisoningstackfix</li>
+  </incompatibleWith>
 </ModMetaData>
