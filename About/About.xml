@@ -13,7 +13,7 @@ The reason I say this is overblown is because - in the aggregate - you're still 
 
 Fixing this is relatively simple - we update the game code to make the determination of whether or not a thing is poisoned at the time it's removed from the stack, rather than when it's ingested. That's all this mod actually does.
 
-Note that there is a nearly identical mod in the workshop with many subscribers that, in my view, does not adequately address this issue. My main concerns are that (A) the mod does not allow you to safely disable it without jeopardizing the integrity of your save file, (B) the mod effectively reduces the risk of food poisoning from 4x meal bills by 75%, (C) the mod makes it almost impossible to get food poisoning from pemmican, and (D) these issues have presumably existed for years without anyone noticing. If you're having problems with other mods that claim to fix this issue, feel free to give my version a try - just make sure not to mix them.
+Note that there is a nearly identical mod in the workshop with many subscribers that, in my view, does not adequately address this issue. My main concerns are that (A) the mod does not allow you to safely disable it without jeopardizing the integrity of your save file, (B) the mod effectively reduces the risk of food poisoning from 4x meal bills by 75%, (C) the mod significantly reduces the risk of food poisoning for large-volume foods such as pemmican, and (D) these issues have presumably existed for years without anyone noticing. If you're having problems with other mods that claim to fix this issue, feel free to give my version a try - just make sure not to mix them.
   </description>
   <modDependencies>
     <li>

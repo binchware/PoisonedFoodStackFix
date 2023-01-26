@@ -43,9 +43,11 @@ namespace PoisonedFoodStackFix
             if (___poisonPct != compFoodPoisonable.PoisonPercent) return;
 
             // skip if entire base stack is poisoned
+            // - base game behavior should be adequate
             if (__instance.PoisonPercent == 1f) return;
 
             // skip if either stack is empty
+            // - base game behavior should be adequate
             if (piece.stackCount == 0 || __instance.parent.stackCount == 0) return;
 
             // allocate poison percents
@@ -126,7 +128,7 @@ namespace PoisonedFoodStackFix
 
             // update target poison props
             ___poisonPct = (float)targetPoison / (__instance.parent.stackCount + count);
-            if (___poisonPct == 0) __instance.cause = FoodPoisonCause.Unknown;
+            if (targetPoison == 0) __instance.cause = FoodPoisonCause.Unknown;
         }
     }
 }
