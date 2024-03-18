@@ -72,11 +72,17 @@ namespace PoisonedFoodStackFix
             // update split poison props
             float splitPoisonPct = (float)splitPoison / piece.stackCount;
             typeof(CompFoodPoisonable).GetField("poisonPct", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(compFoodPoisonable, splitPoisonPct);
-            if (splitPoison == 0) compFoodPoisonable.cause = FoodPoisonCause.Unknown;
+            if (splitPoison == 0)
+            {
+                typeof(CompFoodPoisonable).GetField("cause", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(compFoodPoisonable, FoodPoisonCause.Unknown);
+            }
 
             // update base poison props
             ___poisonPct = (float)basePoison / __instance.parent.stackCount;
-            if (basePoison == 0) __instance.cause = FoodPoisonCause.Unknown;
+            if (basePoison == 0)
+            {
+                typeof(CompFoodPoisonable).GetField("cause", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(__instance, FoodPoisonCause.Unknown);
+            }
         }
 
         public static void AbsorbStackPoisonablePrefix(CompFoodPoisonable __instance, float ___poisonPct, out float __state)
@@ -124,11 +130,17 @@ namespace PoisonedFoodStackFix
             // update other poison props
             float otherPoisonPct = (float)otherPoison / (otherStack.stackCount - count);
             typeof(CompFoodPoisonable).GetField("poisonPct", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(compFoodPoisonable, otherPoisonPct);
-            if (otherPoison == 0) compFoodPoisonable.cause = FoodPoisonCause.Unknown;
+            if (otherPoison == 0)
+            {
+                typeof(CompFoodPoisonable).GetField("cause", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(compFoodPoisonable, FoodPoisonCause.Unknown);
+            }
 
             // update target poison props
             ___poisonPct = (float)targetPoison / (__instance.parent.stackCount + count);
-            if (targetPoison == 0) __instance.cause = FoodPoisonCause.Unknown;
+            if (targetPoison == 0)
+            {
+                typeof(CompFoodPoisonable).GetField("cause", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(__instance, FoodPoisonCause.Unknown);
+            }
         }
     }
 }

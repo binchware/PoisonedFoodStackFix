@@ -2,7 +2,8 @@
 <Configuration>
   <Excluded>
     <exclude>.git</exclude>
-    <exclude>Assemblies\PoisonedFoodStackFix.pdb</exclude>
+    <exclude>1.4\Assemblies\PoisonedFoodStackFix.pdb</exclude>
+    <exclude>1.5\Assemblies\PoisonedFoodStackFix.pdb</exclude>
     <exclude>LICENSE</exclude>
     <exclude>Source</exclude>
   </Excluded>
